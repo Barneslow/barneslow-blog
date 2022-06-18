@@ -4,7 +4,6 @@ import styled from "styled-components"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
 
 const BlogLink = styled(Link)`
   text-decoration: none;
@@ -23,7 +22,7 @@ export default ({ data }) => {
       <Seo title="Home" />
       <div>
         <h1>Barneslows Thoughts</h1>
-        <h4>{data.allMarkdownRemark.totalCount}</h4>
+        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <BlogLink to={node.fields.slug}>
